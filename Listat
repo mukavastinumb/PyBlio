@@ -79,6 +79,12 @@ mjono = "Esimerkki"
 print(mjono[::-1])
 # ikkremisE
 
+#Listan kääntäminen
+lista = [1, 2, 3, 4, 5]
+lista.reverse()
+print(lista)
+# [5, 4, 3, 2, 1]
+
 lista = [5,3,1,4,2]
 # Listan järjestäminen
 lista.sort()
@@ -89,6 +95,12 @@ print(lista)
 # ilman, että alkuperäisen järjestys katoaa
 print(sorted(lista))
 # [1,2,3,4,5]
+
+# Listan tyhjentäminen
+lista = [1,2,3,4,5]
+lista.clear()
+print(lista)
+# []
 
 # Suurin ja pienin 
 suurin = max(lista)
