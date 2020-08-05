@@ -1,0 +1,42 @@
+#For silmukat
+#Listasta tulostus
+lista = [3, 2, 4, 5, 2]
+for alkio in lista:
+    print(alkio)
+#3
+#2
+#4
+#5
+#2
+
+#merkkijonosta kirjainten tulostus
+nimi = input("Anna nimesi: ")
+for merkki in nimi:
+    print(merkki)
+
+Anna nimesi: Kim
+#K 
+#i 
+#m 
+
+#Lukujen tulostus väliltä
+for i in range(1,3)
+    print(i)
+#1
+#2
+
+#Lukujen tulostus väliltä, esim tulostaen jokatoisen luvun
+for i in range(1, 9, 2):
+    print(i)
+#1
+#3
+#5
+#7
+
+#Lukujen tulostus laskien
+for i in range(5, 2, -1):
+    print(i)
+#5
+#4
+#3
+
