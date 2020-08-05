@@ -1,0 +1,167 @@
+# Listat
+# Listan alkioihin viittaaminen
+lista = [1,2,3,4,5,6,7,8,9]
+lista[0]
+# 1
+
+# Listan alkion muokkaaminen
+lista[0] = 10
+print(lista)
+# [10,2,3,4,5,6,7,8,9]
+
+#Listan kopioiminen 
+lista = [1,2,3,4,5]
+kopio = lista[:]
+print(lista)
+# [1,2,3,4,5]
+print(kopio)
+# [1,2,3,4,5]
+
+# Listan pituus
+len(lista)
+# 9
+
+# Listaan lisääminen loppuun
+lista.append(10)
+print(lista)
+# [10,2,3,4,5,6,7,8,9,10]
+
+# Listan lisääminen tiettyn kohtaan
+lista.insert(1, 11)
+print(lista)
+[10,11,2,3,4,5,6,7,8,9,10]
+# Huomaa, että pituus kasvoi, 
+# koska luku 11 meni lukujen 10 ja 2 väliin.
+
+# Listasta poistaminen
+lista.pop(0)
+print(lista)
+# [11,2,3,4,5,6,7,8,9,10]
+# pop metodi myös palauttaa poistetun luvun
+luku = lista.pop(0)
+print(luku)
+# 10
+
+# Listalta poistaminen, jos sijaintia ei tiedetä
+lista = [1,2,3,4,5]
+lista.remove(4)
+print(lista)
+# [1,2,3,5]
+# Huomaa, että .remove poistaa ainoastaan ensimmäisen luvun
+
+# Esiintymien korvaus
+mjono = "Python on kivaa"
+uusi_mjono = mjono.replace("kivaa", "ihan jees!")
+print(uusi_mjono)
+# Python on ihan jees!
+
+# Esiintymien lukumäärä, huom ei laske päälekkäisiä esiintymiä
+mjono = "Vesihiisi sihisi hississä"
+print(mjono.count("si"))
+# 5
+
+lista = [1,2,3,1,4,5,1,6]
+print(lista.count(1))
+# 3
+
+# Osajono listasta
+mjono = "Esimerkki"
+(mjono[3:7])
+# merk
+
+# Listan kääntäminen
+mjono = "Esimerkki"
+print(mjono[::-1])
+# ikkremisE
+
+lista = [5,3,1,4,2]
+# Listan järjestäminen
+lista.sort()
+print(lista)
+# [1,2,3,4,5]
+
+# Listan järjestäminen, 
+# ilman, että alkuperäisen järjestys katoaa
+print(sorted(lista))
+# [1,2,3,4,5]
+
+# Suurin ja pienin 
+suurin = max(lista)
+pienin = min(lista)
+
+# mediaani listasta
+def mediaani(lista: list):
+    jarjestetty = sorted(lista)
+    keskikohta = len(jarjestetty) // 2
+    return jarjestetty[keskikohta]
+
+# Lukuväli listaksi
+luvut = list(range(2, 7))
+print(luvut)
+# [2, 3, 4, 5, 6]
+
+
+# Sisäkkäiset listat / matriisit
+lista = [[5, 2, 3], [4, 1], [2, 2, 5, 1]]
+print(lista)
+# [[5, 2, 3], [4, 1], [2, 2, 5, 1]]
+
+print(lista[1])
+# [4, 1]
+
+print(lista[1][0])
+# 4
+
+# Lista henkilöistä ja heidän tiedoista
+henkilot = [
+["Anu", 10, 26], 
+["Petteri", 7, 22], 
+["Emilia", 32, 37], 
+["Antti", 39, 44]]
+
+for henkilo in henkilot:
+  nimi = henkilo[0]
+  ika = henkilo[1]
+  kenka = henkilo[2]
+  print(f"{nimi}: ikä {ika} vuotta, kengännumero {kenka}")
+
+# Anu: ikä 10 vuotta, kengännumero 26
+# Petteri: ikä  7 vuotta, kengännumero 22
+# Emilia: ikä 32 vuotta, kengännumero 37
+# Antti: ikä 39 vuotta, kengännumero 44
+
+# Matriisin rivien tulostaminen
+matriisi = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+for rivi in matriisi:
+    print(rivi)
+
+# [1, 2, 3]
+# [4, 5, 6]
+# [7, 8, 9]
+
+# Matriisin alkioiden tulostaminen
+matriisi = [[1, 2], [4, 5]]
+for rivi in matriisi:
+    print("uusi rivi")
+    for alkio in rivi:
+        print(alkio)
+# uusi rivi
+# 1
+# 2
+# uusi rivi
+# 4
+# 5
+
+# Matriisin alkioiden muokkaaminen
+m = [[1,2,3], [4,5,6], [7,8,9]]
+
+for i in range(len(m)):
+    for j in range(len(m[i])):
+        m[i][j] += 1
+print(m)
+# [[2, 3, 4], [5, 6, 7], [8, 9, 10]]
+# Ulompi silmukka käy range-funktion avulla läpi 
+# arvot nollasta matriisin pituuteen 
+# (eli matriisin rivien määrään) 
+# ja sisempi silmukka jokaisen rivin alkiot 
+# nollasta rivin pituuteen.
