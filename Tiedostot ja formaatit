@@ -1,0 +1,32 @@
+#Tuple
+#Tuple on muuttumaton "lista". Tupleja käytetään kun ei haluta muokata arvoja. Esimerkiksi koordinaatteja.
+
+piste = (10, 20)
+print("x-koordinaatti:", piste[0])
+print("y-koordinaatti:", piste[1])
+
+#x-koordinaatti: 10
+#y-koordinaatti: 20
+
+#Tuplea voi käyttää kirjastossa avaimena, toisinkuin listoja:
+pisteet = {}
+pisteet[(3, 5)] = "apina"
+pisteet[(5, 0)] = "banaani"
+pisteet[(1, 2)] = "cembalo"
+print(pisteet[(3, 5)])
+#apina
+
+
+
+#Tiedostojen lukeminen
+# esimerkki.txt: Python on ihan jees!
+with open("esimerkki.txt") as tiedosto:
+    sisalto = tiedosto.read()
+    print(sisalto)
+#Python on ihan jees!
+
+#CSV-tiedoston perkaaminen
+with open("arvosanat.csv") as tiedosto:
+   for rivi in tiedosto:
+       rivi = rivi.replace("\n", "")
+       osat = rivi.split(";")
