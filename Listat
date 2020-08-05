@@ -4,6 +4,11 @@ lista = [1,2,3,4,5,6,7,8,9]
 lista[0]
 # 1
 
+# Listasta etsiminen
+numeron_sijainti = lista.find("1")
+print(numeron_sijainti)
+# 0
+
 # Listan alkion muokkaaminen
 lista[0] = 10
 print(lista)
