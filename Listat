@@ -47,6 +47,9 @@ luku = lista.pop(0)
 print(luku)
 # 10
 
+#Lista uniikeista arvoista
+list(set(lista))
+list(dict.fromkeys(lista))
 # Listalta poistaminen, jos sijaintia ei tiedetä
 lista = [1,2,3,4,5]
 lista.remove(4)
