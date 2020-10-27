@@ -1,0 +1,31 @@
+#Tuple
+nimi = "Nuoruuteni näppäilyt"
+kirjailija = "Pekka Python"
+vuosi = 1992
+
+# Yhdistetään yhdeksi tupleksi
+kirja = (nimi, kirjailija, vuosi)
+
+# Tulostetaan kirjan nimi
+print(kirja[0])
+
+#Kirjasto
+nimi = "Nuoruuteni näppäilyt"
+kirjailija = "Pekka Python"
+vuosi = 1992
+
+# Yhdistetään yhdeksi sanakirjaksi
+kirja = {"nimi": nimi, "kirjailija": kirjailija, "vuosi": vuosi}
+
+# Tulostetaan kirjan nimi
+print(kirja["nimi"])
+
+# muodostetaan sanakirjatyyppinen kirjaolio
+kirja = {"nimi": "Vanhus ja Python", "kirjailija": "Ernest Pythonen", "vuosi": 1952}
+for kirja in kirja.values():
+    print(kirja)
+    
+#Vanhus ja Python
+#Ernest Pythonen
+#1952
+
