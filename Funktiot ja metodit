@@ -1,0 +1,11 @@
+#Etsiminen
+
+nimi = "Keijo Keksitty"
+
+# Tulostetaan K-kirjaimien määrä
+print(nimi.count("K"))
+#2
+
+# Osajonon Keksitty indeksi
+print(nimi.find("Keksitty"))
+#6
